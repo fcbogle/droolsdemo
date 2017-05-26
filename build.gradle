@@ -1,0 +1,43 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.3.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+
+    maven {
+        name 'central'
+        url 'http://repo1.maven.org/maven2'
+    }
+    maven {
+        name 'jboss'
+        url 'http://repository.jboss.org/nexus/content/groups/public-jboss'
+    }
+}
+
+ext {
+    droolsVersion = '6.5.0.Final'
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+    compile "org.kie:kie-api:$droolsVersion"
+    compile "org.drools:drools-core:$droolsVersion"
+    compile "org.drools:drools-compiler:$droolsVersion"
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
