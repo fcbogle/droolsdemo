@@ -4,6 +4,8 @@ import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.builder.*;
 import org.kie.api.runtime.KieContainer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -18,46 +20,17 @@ import java.util.Scanner;
 /**
  * Created by frankbogle on 22/05/2017.
  */
+
 @Configuration
 public class DroolsConfig {
 
-    @Autowired
-    private BeanFactory beanFactory;
-
-    private static String convertStreamToString(java.io.InputStream is) {
-        try (Scanner scanner = new Scanner(is, "UTF-8")) {
-            scanner.useDelimiter("\\A");
-            return scanner.hasNext() ? scanner.next() : "";
-        }
-    }
+    private static final Logger logger = LoggerFactory.getLogger(DroolsConfig.class);
 
     @Bean
     @ConditionalOnMissingBean(KieContainer.class)
     public KieContainer kieContainer() throws IOException {
-        KieServices ks = KieServices.Factory.get();
-        final KieRepository kr = ks.getRepository();
-
-        kr.addKieModule(kr::getDefaultReleaseId);
-
-        KieFileSystem kfs = ks.newKieFileSystem();
-        Resource[] files = new PathMatchingResourcePatternResolver().getResources("classpath*:rules/**/*.*");
-
-        for (Resource file : files) {
-            kfs.write("src/main/resources/" + file.getFilename(), convertStreamToString(file.getInputStream()));
-        }
-
-        KieBuilder kb = ks.newKieBuilder(kfs);
-        kb.buildAll(); // kieModule is automatically deployed to KieRepository
-        // if successfully built.
-        KieContainer kContainer = ks.newKieContainer(kr.getDefaultReleaseId());
-        return kContainer;
+        KieContainer kieContainer = KieServices.Factory.get().getKieClasspathContainer();
+        return kieContainer;
     }
-
-    @Bean
-    @ConditionalOnMissingBean(KieBase.class)
-    public KieBase kieBase() throws IOException {
-        return beanFactory.getBean(KieContainer.class).getKieBase();
-    }
-
 
 }

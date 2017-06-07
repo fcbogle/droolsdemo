@@ -1,0 +1,15 @@
+package frank.rules;
+
+global org.slf4j.Logger logger
+
+import org.frank.bogle.model.Item;
+import org.frank.bogle.model.Item.Category;
+
+rule "Classify Item - Low Range"
+    when
+        $i: Item(cost < 200)
+    then
+        $i.setCategory(Item.Category.LOW_RANGE);
+        logger.info("Rule invoked for Item object: " + $i.getName());
+
+end

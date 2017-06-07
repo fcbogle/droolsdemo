@@ -36,7 +36,12 @@ ext {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
+    compile('org.springframework.boot:spring-boot-starter-data-rest')
+    compile('org.springframework.data:spring-data-rest-hal-browser')
+    compile('org.springframework.hateoas:spring-hateoas')
+    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile "org.kie:kie-api:$droolsVersion"
+    compile "org.kie:kie-ci:${droolsVersion}"
     compile "org.drools:drools-core:$droolsVersion"
     compile "org.drools:drools-compiler:$droolsVersion"
 	testCompile('org.springframework.boot:spring-boot-starter-test')

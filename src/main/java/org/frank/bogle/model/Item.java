@@ -1,4 +1,4 @@
-package org.drools.devguide.eshop.model;
+package org.frank.bogle.model;
 
 import java.io.Serializable;
 import java.util.Objects;

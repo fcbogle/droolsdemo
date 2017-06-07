@@ -1,4 +1,4 @@
-package org.drools.devguide.eshop.model;
+package org.frank.bogle.model;
 
 import java.io.Serializable;
 
@@ -8,7 +8,7 @@ public class ProviderRequest implements Serializable {
     
     private Provider provider;
     private Order order;
-    
+
     public ProviderRequest() {
     }
 

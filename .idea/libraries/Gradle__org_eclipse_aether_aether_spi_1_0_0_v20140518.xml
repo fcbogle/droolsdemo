@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.aether:aether-spi:1.0.0.v20140518">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.aether/aether-spi/1.0.0.v20140518/985a9a12b904fb3bafd4dc6b49f6a084845703a1/aether-spi-1.0.0.v20140518.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.aether/aether-spi/1.0.0.v20140518/762da4754b8652a40adae11be1613823d0eb5ff/aether-spi-1.0.0.v20140518-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

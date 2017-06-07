@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/droolsdemo.iml" filepath="$PROJECT_DIR$/.idea/modules/droolsdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/droolsdemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/droolsdemo_main.iml" group="droolsdemo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/droolsdemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/droolsdemo_test.iml" group="droolsdemo" />
-      <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
     </modules>
   </component>
 </project>

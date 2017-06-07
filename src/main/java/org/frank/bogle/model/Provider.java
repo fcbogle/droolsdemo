@@ -1,4 +1,4 @@
-package org.drools.devguide.eshop.model;
+package org.frank.bogle.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class Provider implements Serializable {
     private List<Item> items = new ArrayList<Item>();
     private String name;
     private Integer rating;
-    
+
     public Provider() {
     }
 

@@ -1,20 +1,33 @@
-package org.drools.devguide.eshop.model;
+package org.frank.bogle.model;
 
-import java.io.Serializable;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.hateoas.ResourceSupport;
+
 import java.util.Objects;
 
-public class Customer implements Serializable {
+@Document
+public class Customer extends ResourceSupport {
+
+
 
     public enum Category {
         NA, GOLD, SILVER, BRONZE
     };
-    private static final long serialVersionUID = 1L;
+
+    public enum LifeExperience {
+        NA, CHILD, YOUTH, ADULT, ANCIENT
+    };
+
+    @Id
+    private String mongoId;
 
     private Long customerId;
     private Integer age;
     private String name;
     private String email;
     private Category category = Category.NA;
+    private LifeExperience lifeExperience = LifeExperience.NA;
 
     public Customer() {
     }
@@ -55,8 +68,22 @@ public class Customer implements Serializable {
         return category;
     }
 
+    public LifeExperience getLifeExperience() {
+        return lifeExperience;
+    }
+
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public void setLifeExperience(LifeExperience lifeExperience) { this.lifeExperience = lifeExperience; }
+
+    public String getMongoId() {
+        return mongoId;
+    }
+
+    public void setMongoId(String mongoId) {
+        this.mongoId = mongoId;
     }
 
     @Override
@@ -95,6 +122,14 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "Customer [id = " + customerId + ", age=" + age + ", email=" + email + ", name=" + name + ", category = " + category + "]";
+        return "Customer{" +
+                "mongoId='" + mongoId + '\'' +
+                ", customerId=" + customerId +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", category=" + category +
+                ", lifeExperience=" + lifeExperience +
+                '}';
     }
 }

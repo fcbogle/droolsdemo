@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.drools.devguide.eshop.model;
+package org.frank.bogle.model;
 
 import java.util.Date;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public class SuspiciousOperation {
         this.type = type;
         this.date = date;
     }
-    
+
     public Customer getCustomer() {
         return customer;
     }

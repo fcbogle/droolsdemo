@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.kie:kie-ci:6.5.0.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kie/kie-ci/6.5.0.Final/bd5cdb9a1ab589d15733d34a69f35db837f90a68/kie-ci-6.5.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kie/kie-ci/6.5.0.Final/c5bfb9129ff0dd4ad8c6c7489dfe1309181c749/kie-ci-6.5.0.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

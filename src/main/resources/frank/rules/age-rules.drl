@@ -1,0 +1,14 @@
+package frank.rules;
+
+global org.slf4j.Logger logger
+
+import org.frank.bogle.model.Customer;
+
+rule "Classify Age - Ancient"
+    when
+        $c: Customer(age >= 47)
+    then
+        $c.setLifeExperience(Customer.LifeExperience.ANCIENT);
+        logger.info("Rule invoked for Customer object: " + $c);
+
+end

@@ -1,4 +1,4 @@
-package org.drools.devguide.eshop.model;
+package org.frank.bogle.model;
 
 import java.io.Serializable;
 
@@ -8,14 +8,14 @@ public class OrderLine implements Serializable {
     
     private Item item;
     private Integer quantity;
-    
+
     public OrderLine() {
     }
-    
+
     public Item getItem() {
         return item;
     }
-    
+
     public void setItem(Item item) {
         this.item = item;
     }

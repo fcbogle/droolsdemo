@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.maven:maven-aether-provider:3.2.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-aether-provider/3.2.5/dfddf469d20b877b184dda5d6e60f0c75f558a72/maven-aether-provider-3.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-aether-provider/3.2.5/4b70ad2a0a2f305278ee83c22f286fe14e65052f/maven-aether-provider-3.2.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

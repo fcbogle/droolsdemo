@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.aether:aether-connector-basic:1.0.0.v20140518">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.aether/aether-connector-basic/1.0.0.v20140518/fd563f66fc1b6b908934639f87b4e0a0f43809c3/aether-connector-basic-1.0.0.v20140518.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.aether/aether-connector-basic/1.0.0.v20140518/bc39c1835a2443a8ee772fdd5f65c3a4360ead02/aether-connector-basic-1.0.0.v20140518-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

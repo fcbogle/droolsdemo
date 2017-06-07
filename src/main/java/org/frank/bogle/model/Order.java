@@ -1,4 +1,4 @@
-package org.drools.devguide.eshop.model;
+package org.frank.bogle.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -65,13 +65,13 @@ public class Order implements Serializable {
                 .mapToDouble(item -> item.getItem().getSalePrice() * item.getQuantity())
                 .sum();
     }
-    
+
     public int getTotalItems() {
         return this.getOrderLines().stream()
                 .mapToInt(item -> item.getQuantity())
                 .sum();
     }
-    
+
     public void increaseDiscount(double increase) {
         if (discount == null) {
             discount = new Discount(0.0);
